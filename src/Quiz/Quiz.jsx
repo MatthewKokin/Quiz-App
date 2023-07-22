@@ -22,7 +22,12 @@ export default function Quiz(props) {
         const wrongAnswersArray = question.incorrect_answers.slice(0, 3).map(answer => decodeHTMLEntities(answer))
         const correctAnswer = decodeHTMLEntities(question.correct_answer)
         const answers = pushToRandomIndex(correctAnswer, wrongAnswersArray)
-        let answersHTML = answers.map((answer, answerIndex) => <li key={answerIndex}>{answer}</li>)
+        let answersHTML = answers.map((answer, answerIndex) => (
+        <li key={answerIndex}
+            onClick={props.handleClick}
+            >
+            {answer}
+        </li>))
         
         return (
             <div className='q' key={questionIndex}>

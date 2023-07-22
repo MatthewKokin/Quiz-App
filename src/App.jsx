@@ -12,6 +12,12 @@ function App() {
     setIsStarted(oldState => !oldState)  
   }
   //-----------------------------------------------------------//
+  function clickfunc(e){
+    e.preventDefault()
+    console.log(e.target)
+  }
+
+
 
   useEffect(() => {
     if (isStarted) {
@@ -24,7 +30,7 @@ function App() {
   }, [isStarted]);
 
   return (
-    !isStarted? <Start handleStartClick={toggle}/>: <Quiz quizData={quizData} />
+    !isStarted? <Start handleStartClick={toggle}/>: <Quiz quizData={quizData} handleClick={clickfunc}/>
   )
 }
 
