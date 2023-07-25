@@ -41,7 +41,7 @@ export default function Quiz(props) {
     }):
     null
     //this is because when it will be first rendered there will be no data (since the button wasnt clicked yet to fetch)
-
+    ///
     return (
         <div className="box">
             <div className="quiz">
