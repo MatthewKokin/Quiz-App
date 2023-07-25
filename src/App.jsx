@@ -12,10 +12,11 @@ function App() {
     setIsStarted(oldState => !oldState)  
   }
   //-----------------------------------------------------------//
-  function clickfunc(e){
-    e.preventDefault()
-    console.log(e.target)
-  }
+  // function clickfunc(e){
+  //   e.preventDefault()
+  //   console.log(e.target)
+  // }
+  // handleClick={clickfunc}
 
 
 
@@ -30,7 +31,7 @@ function App() {
   }, [isStarted]);
 
   return (
-    !isStarted? <Start handleStartClick={toggle}/>: <Quiz quizData={quizData} handleClick={clickfunc}/>
+    !isStarted? <Start handleStartClick={toggle}/>: <Quiz quizData={quizData} />
   )
 }
 

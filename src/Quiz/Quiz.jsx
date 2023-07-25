@@ -52,3 +52,11 @@ export default function Quiz(props) {
         </div>
     )
 }
+
+//Pull back to the last version
+// But save this:
+// function clickfunc(e){
+  //   e.preventDefault()
+  //   console.log(e.target)
+  // }
+  // handleClick={clickfunc}
